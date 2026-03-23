@@ -1,0 +1,196 @@
+/* ===== BODY ===== */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #1f1c2c, #928dab);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  color: white;
+  transition: 0.4s;
+}
+
+/* ===== CONTAINER ===== */
+.container {
+  backdrop-filter: blur(15px);
+  background: rgba(255, 255, 255, 0.1);
+  padding: 25px;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+  text-align: center;
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+/* ===== HEADINGS ===== */
+h1 {
+  margin-bottom: 10px;
+}
+
+h3 {
+  margin: 0;
+}
+
+/* ===== TOGGLE ===== */
+.toggle {
+  margin-bottom: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+/* ===== INPUT (FINAL MERGED) ===== */
+input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px;
+  margin: 8px 0;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.2);
+  background: rgba(255,255,255,0.1);
+  color: #ff4d4d; /* 🔴 RED TEXT */
+  font-size: 14px;
+  outline: none;
+  transition: 0.3s;
+}
+
+/* Placeholder */
+input::placeholder {
+  color: #ffaaaa;
+  opacity: 1;
+}
+
+/* Focus */
+input:focus {
+  border-color: #ff4d4d;
+  box-shadow: 0 0 6px rgba(255,77,77,0.6);
+  color: #ff3333;
+}
+
+/* ===== BUTTON ===== */
+button {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(135deg, #ff7eb3, #ff758c);
+  border: none;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 5px;
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+/* ===== PROGRESS BAR ===== */
+.progress-bar {
+  width: 100%;
+  height: 20px;
+  background: rgba(255,255,255,0.2);
+  border-radius: 10px;
+  margin-top: 12px;
+  overflow: hidden;
+}
+
+#progress {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #00f260, #0575e6);
+  border-radius: 10px;
+  transition: width 0.8s ease-in-out;
+}
+
+/* ===== RESULT ===== */
+.result {
+  margin-top: 12px;
+  padding: 12px;
+  background: rgba(255,255,255,0.15);
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+/* ===== HISTORY ===== */
+.history {
+  margin-top: 15px;
+  text-align: left;
+}
+
+.history-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.history-box {
+  max-height: 120px;
+  overflow-y: auto;
+  margin-top: 8px;
+}
+
+/* ===== CLEAR BUTTON ===== */
+.clear-btn {
+  background: #ff4d4d;
+  padding: 5px 10px;
+  border-radius: 6px;
+  border: none;
+  color: white;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.clear-btn:hover {
+  background: #cc0000;
+}
+
+/* ===== LIGHT MODE ===== */
+.light-mode {
+  background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+  color: black;
+}
+
+.light-mode .container {
+  background: rgba(255,255,255,0.95);
+  color: black;
+  backdrop-filter: none;
+}
+
+/* Light mode inputs */
+.light-mode input {
+  background: #f0f0f0;
+  color: black;
+}
+
+.light-mode input::placeholder {
+  color: #555;
+}
+
+/* Result */
+.light-mode .result {
+  background: #eaeaea;
+  color: black;
+}
+
+/* Text fix */
+.light-mode h1,
+.light-mode h3,
+.light-mode li {
+  color: black;
+}
+
+/* Progress */
+.light-mode .progress-bar {
+  background: #ccc;
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 500px) {
+  .container {
+    width: 95%;
+    padding: 20px;
+  }
+}
