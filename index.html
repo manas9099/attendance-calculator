@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Attendance Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+  <h1>📊 Attendance Status</h1>
+<div class="toggle" onclick="toggleMode()">🌙 Toggle Mode</div>
+  <input type="number" id="total" placeholder="Total Classes">
+  <input type="number" id="attended" placeholder="Attended Classes">
+  <input type="number" id="required" placeholder="Required %">
+  <input type="number" id="perDay" placeholder="Classes per Day">
+
+  <button onclick="calculate()">Calculate</button>
+
+  <!-- Progress Bar -->
+  <div class="progress-bar">
+    <div id="progress"></div>
+  </div>
+
+  <!-- Chart -->
+  <canvas id="chart" height="150"></canvas>
+
+  <!-- Result -->
+  <div class="result" id="output"></div>
+
+  <!-- History -->
+  <div class="history">
+    <div class="history-header">
+      <h3>📜 History</h3>
+      <button class="clear-btn" onclick="clearHistory()">Clear</button>
+    </div>
+
+    <div class="history-box">
+      <ul id="historyList"></ul>
+    </div>
+  </div>
+</div>
+
+<!-- Chart.js -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script src="script.js"></script>
+</body>
+</html>
